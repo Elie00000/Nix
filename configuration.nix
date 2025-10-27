@@ -12,6 +12,7 @@
       ./modules/pipewire.nix
       ./modules/services.nix
       ./modules/pam.nix
+      ./modules/firewall.nix
     ];
 
   networking.hostName = "nixos";
