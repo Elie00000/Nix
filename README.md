@@ -11,8 +11,8 @@ home-manager switch
 
 >Fix
 - [ ] osu
-- [ ] fix quaver sound
-- [ ] fix overall performance
+- [x] fix quaver sound
+- [x] fix overall performance
 - [x] найти либо новый скриншот, либо починить flameshot
 - [ ] ZoV Browser
 - [ ] sound applet
