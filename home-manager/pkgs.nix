@@ -1,9 +1,8 @@
-{ pkgs, ... }: 
+{ pkgs, inputs, ... }: 
     let
         unstable = import <nixpkgs-unstable> { };
         pkgs = import <nixpkgs> { config = { allowUnfree = true; }; };
     in {
-
         home.packages = with pkgs; [
 
         # Utils
@@ -24,7 +23,8 @@
         vscode
         alsa-utils
         shortwave 
-   
+	nekoray
+
         # Fonts
         material-design-icons
         noto-fonts
