@@ -6,7 +6,7 @@ home-manager switch
 - [x] applets +-
 - [x] улучшить полибар +-
 - [x] улучшить внешний вид интернета
-- [ ] zsh
+- [x] zsh
 - [ ] alacritty-smooth-cursor
 
 >Fix
