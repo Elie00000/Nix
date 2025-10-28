@@ -2,20 +2,13 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
-
     envycontrol = {
       url = "github:bayasdev/envycontrol";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
- outputs = { self, nixpkgs, home-manager, envycontrol, zen-browser, ... } @ inputs:
+ outputs = { self, nixpkgs, envycontrol, ... } @ inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
@@ -24,7 +17,8 @@
         inherit system;
         specialArgs = { inherit inputs; };
         modules = [
-          ./configuration.nix
+          ./modules/pkgs.nix
+	  ./configuration.nix
           {
             environment.systemPackages = with pkgs; [
               (python3Packages.buildPythonApplication rec {
@@ -55,12 +49,7 @@
           }
         ];
       };
-    homeConfigurations.aiko = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.${system};
-      modules = [ ./home-modules/home.nix ];
-   
-};
-};
+   };
 }
 
 
