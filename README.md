@@ -15,7 +15,6 @@ home-manager switch
 - [x] fix overall performance
 - [x] найти либо новый скриншот, либо починить flameshot
 - [ ] ZoV Browser
-- [ ] sound applet
 
 >Misc
 - [x] почистить configuration.nix
