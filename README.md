@@ -7,7 +7,6 @@ home-manager switch
 - [x] улучшить полибар +-
 - [x] улучшить внешний вид интернета
 - [x] zsh
-- [ ] alacritty-smooth-cursor
 
 >Fix
 - [ ] osu
