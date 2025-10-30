@@ -14,6 +14,7 @@ home-manager switch
 - [x] fix overall performance
 - [x] найти либо новый скриншот, либо починить flameshot
 - [ ] ZoV Browser
+- [ ] picom rules
 
 >Misc
 - [x] почистить configuration.nix
