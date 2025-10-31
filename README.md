@@ -13,7 +13,7 @@ home-manager switch
 - [x] fix quaver sound
 - [x] fix overall performance
 - [x] найти либо новый скриншот, либо починить flameshot
-- [ ] ZoV Browser
+- [ ] zen Browser
 - [ ] picom rules
 
 >Misc
