@@ -4,10 +4,6 @@
 
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/e6919fe7-9ffa-4ab8-9443-c0d817af733d" />
 
-```
-sudo nixos-rebuild switch --flake /etc/nixos
-home-manager switch
-```
 
 I don't know how to make my system reproducible, im still too new in NixOS sorryyyy
 
