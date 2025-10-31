@@ -6,15 +6,15 @@ home-manager switch
 - [x] applets +-
 - [x] улучшить полибар +-
 - [x] улучшить внешний вид интернета
-- [ ] zsh
-- [ ] alacritty-smooth-cursor
+- [x] zsh
 
 >Fix
 - [ ] osu
 - [x] fix quaver sound
 - [x] fix overall performance
 - [x] найти либо новый скриншот, либо починить flameshot
-- [ ] ZoV Browser
+- [ ] zen Browser
+- [ ] picom rules
 
 >Misc
 - [x] почистить configuration.nix
