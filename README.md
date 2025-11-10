@@ -27,5 +27,6 @@ I don't know how to make my system reproducible, im still too new in NixOS sorry
 - [x] собрать все в одном месте для красоты
 - [ ] переделать все конфиги в .nix
 - [ ] установить comfyui или аналог
+- [ ] надо упорядочить репо, а то говно какое-то в файлах
 
 keep in mind that my system will always be supplemented and improved, if you are interested, please add a star and watch the repository
