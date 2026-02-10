@@ -8,7 +8,6 @@
       ./modules/user.nix
       ./modules/pkgs.nix
       ./modules/xserver.nix
-      ./modules/nvidia.nix
       ./modules/pipewire.nix
       ./modules/services.nix
       ./modules/pam.nix
@@ -17,6 +16,10 @@
     ];
 
   networking.hostName = "elienixos";
+
+  hardware.graphics = {
+    enable = true;
+  };
 
   networking.networkmanager.enable = true;
 
