@@ -28,8 +28,7 @@
         enable = true;
         windowManager. openbox.enable = true;
         windowManager.i3.enable = true;
-        layout = "us,ru";
-        xkbOptions = "grp:alt_shift_toggle";
+        layout = "fr";car
     };
 
     services.displayManager = {
@@ -42,6 +41,4 @@
         Xft.dpi: 120
         ''}
     '';
-
-    services.xserver.videoDrivers = [ "nvidia" ];
 }
