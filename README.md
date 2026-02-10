@@ -1,32 +1,25 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/80a7035a-5817-4fc0-947d-22108264a6e8" />
+Je ne sais pas comment rendre mon système reproductible ; je suis encore novice sur NixOS, désolé.
 
-<img width="1920" height="1079" alt="image" src="https://github.com/user-attachments/assets/cb7f06b0-d4d9-431c-b870-5a597aab0c05" />
-
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/e6919fe7-9ffa-4ab8-9443-c0d817af733d" />
-
-
-I don't know how to make my system reproducible, im still too new in NixOS sorryyyy
-
->Enchance
-- [x] applets +-
-- [x] улучшить полибар +-
-- [x] улучшить внешний вид интернета
+>Améliorations
+- [x] Applets +-
+- [x] Améliorer Polybar +-
+- [x] Améliorer l'interface Internet
 - [x] zsh
 
->Fix
+>Corrections
 - [ ] osu
-- [x] fix quaver sound
-- [x] fix overall performance
-- [x] найти либо новый скриншот, либо починить flameshot
-- [ ] zen Browser
-- [ ] picom rules
+- [x] Corriger le son de Quaver
+- [x] Améliorer les performances générales
+- [x] Trouver une nouvelle capture d'écran ou corriger Flameshot
+- [ ] Navigateur Zen
+- [ ] Règles Picom
 
->Misc
-- [x] почистить configuration.nix
-- [ ] почистить flake.nix
-- [x] собрать все в одном месте для красоты
-- [ ] переделать все конфиги в .nix
-- [ ] установить comfyui или аналог
-- [ ] надо упорядочить репо, а то говно какое-то в файлах
+>Divers
+- [x] Nettoyer configuration.nix
+- [ ] Nettoyer flake.nix
+- [x] Centraliser tous les fichiers pour une meilleure présentation
+- [ ] Reconvertir tous les fichiers de configuration en .nix
+- [ ] Installer ComfyUI ou un équivalent
+- [ ] Organiser le dépôt est nécessaire, sinon les fichiers sont désorganisés
 
-keep in mind that my system will always be supplemented and improved, if you are interested, please add a star and watch the repository
+Sachez que mon système sera constamment enrichi et amélioré. Si cela vous intéresse, n'hésitez pas à ajouter une étoile et à suivre le dépôt.
