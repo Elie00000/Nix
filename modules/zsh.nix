@@ -11,8 +11,6 @@
     shellAliases = {
       ll = "ls -l";
       la = "ls -a";
-      zap = "./zapret-discord-youtube-linux/main_script.sh";
-      edit = "sudo -e";
       upd = "sudo nixos-rebuild switch --flake /etc/nixos";
       cdn = "cd /etc/nixos";
     };
