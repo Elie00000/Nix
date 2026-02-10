@@ -6,7 +6,6 @@ done
 HELPDIR="/nix/store/j424hy1p76sqywcg0vcqbaqp560hw0c5-zsh-5.9/share/zsh/$ZSH_VERSION/help"
 
 autoload -U compinit && compinit
-source /nix/store/y82j3q7xyfhsiwffhn8r5fwx7knr5lnw-zsh-autosuggestions-0.7.1/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_STRATEGY=(history)
 
 
@@ -15,7 +14,7 @@ ZSH_AUTOSUGGEST_STRATEGY=(history)
 HISTSIZE="10000"
 SAVEHIST="10000"
 
-HISTFILE="/home/aiko/.zsh_history"
+HISTFILE="/home/elie/.zsh_history"
 mkdir -p "$(dirname "$HISTFILE")"
 
 setopt HIST_FCNTL_LOCK
@@ -39,7 +38,5 @@ for opt in "${disabled_opts[@]}"; do
 done
 unset opt disabled_opts
 
-source /nix/store/mwy8lsv649iqz2ankmq0ylycm1fc35cj-zsh-syntax-highlighting-0.8.0/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-ZSH_HIGHLIGHT_HIGHLIGHTERS+=()
 
 
