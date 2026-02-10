@@ -28,7 +28,7 @@
         enable = true;
         windowManager. openbox.enable = true;
         windowManager.i3.enable = true;
-        layout = "fr";car
+        layout = "fr";
     };
 
     services.displayManager = {
