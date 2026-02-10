@@ -16,13 +16,13 @@
 #      ./modules/firewall.nix
     ];
 
-  networking.hostName = "nixos";
+  networking.hostName = "elienixos";
 
   networking.networkmanager.enable = true;
 
-  time.timeZone = "Europe/Moscow";
+  time.timeZone = "Europe/Paris";
 
-  system.stateVersion = "25.05"; # Don't Change It
+  system.stateVersion = "25.11"; # Don't Change It
 
 }
 
