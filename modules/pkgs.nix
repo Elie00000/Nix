@@ -10,8 +10,6 @@
     ];
 
     programs.steam.enable = true;
-
-    programs.nekoray.tunMode.enable = true;
     
     environment.systemPackages = with pkgs; [
         wget
