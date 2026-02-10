@@ -4,7 +4,7 @@
         extraConfig = ''
         user-background = false
         '';
-        background = "/etc/nixos/backgrounds/login.jpg";
+        background = "/home/elie/Images/login.jpg";
     };
   
     services.xserver.displayManager.lightdm.greeters.gtk = {
@@ -15,7 +15,7 @@
         [greeter]
         show-indicators=
         position = 50%,center 85%,center
-#       default-user-image = '/etc/nixos/backgrounds/avatar.png'
+#       default-user-image = '/home/elie/Images/avatar.png'
         font-name = Quicksand 12
         text-color = #e0e0e0
         panel-background-color = rgba(0,0,0,0.0)
