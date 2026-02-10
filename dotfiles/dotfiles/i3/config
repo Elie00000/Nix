@@ -209,8 +209,8 @@ exec --no-startup-id skippy-xd --start-daemon
 bindsym $mod+shift+d exec --no-startup-id skippy-xd
 
 #autostart
-exec_always --no-startup-id feh --bg-scale /home/aiko/Pictures/Mikushaa.png
-exec_always --no-startup-id "picom --config /home/aiko/.config/picom/picom.conf -b && polybar --config=/home/aiko/.config/polybar/config && wal -i ~/Pictures/Mikushaa.png"
+exec_always --no-startup-id feh --bg-scale /home/elie/Images/Mikushaa.png
+exec_always --no-startup-id "picom --config /home/elie/.config/picom/picom.conf -b && polybar --config=/home/elie/.config/polybar/config && wal -i ~/Images/Mikushaa.png"
 
 #other
 for_window [class="Flameshot"] floating enable
