@@ -14,7 +14,6 @@
     programs.nekoray.tunMode.enable = true;
     
     environment.systemPackages = with pkgs; [
-        neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
         wget
         home-manager
         git
@@ -25,13 +24,10 @@
 
         #Apps    
         alacritty
-        obs-studio
-        obsidian
         pavucontrol
-        telegram-desktop
-        vesktop
-        google-chrome
+        discord
         nautilus
+        firefox
     
         #Other
         htop	
