@@ -22,8 +22,6 @@
         # Apps
         vscode
         alsa-utils
-        shortwave 
-	nekoray
 
         # Fonts
         material-design-icons
