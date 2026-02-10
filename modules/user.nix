@@ -1,7 +1,7 @@
 { pkgs, ... }: {
-    users.users.aiko = {
+    users.users.elie = {
         isNormalUser = true;
-        description = "Aiko";
+        description = "Elie";
         extraGroups = [ "networkmanager" "wheel" ];
         packages = with pkgs; [];
     };
