@@ -4,6 +4,10 @@
     ./zsh.nix
     ./polkit.nix
     ./cursor.nix
+    ./i3.nix
+    ./alacritty.nix
+    ./picom.nix
+    ./polybar.nix
   ];
 
   home = {
