@@ -1,35 +1,45 @@
-NixOS Configuration
+🧊 Configuration NixOS – Elie
 
-Configuration personnelle NixOS, versionnée afin de garantir un système reproductible, maintenable et facilement déployable sur une ou plusieurs machines.
+Ce dépôt contient ma configuration personnelle NixOS, versionnée avec Git afin d’avoir un système :
 
-configuration.nix : Configuration principale du système
+✅ Reproductible
 
-hardware-configuration.nix : Configuration matérielle générée par NixOS
+✅ Versionné
 
-flake.nix : Définition Flake (si utilisée)
+✅ Facilement réinstallable
 
-flake.lock : Verrouillage des versions des dépendances
+✅ Déployable sur une nouvelle machine
 
-modules/ : Modules NixOS personnalisés
+📦 Contenu du dépôt
 
-home/ : Configuration Home Manager (si utilisée)
+configuration.nix → Configuration principale du système
 
-Installation avec Flakes (méthode recommandée)
+hardware-configuration.nix → Configuration matérielle générée par NixOS
 
-Les Flakes permettent un déploiement reproductible et une gestion explicite des dépendances.
+flake.nix → Définition flake (si utilisée)
 
-1. Activer les flakes
+flake.lock → Verrouillage des versions des dépendances
 
-Ajouter dans configuration.nix :
+modules/ → Modules personnalisés (si présents)
+
+home/ → Configuration Home-Manager (si utilisée)
+
+🚀 Installation avec Flakes (Méthode recommandée)
+
+Les flakes permettent une configuration 100% reproductible, portable et moderne.
+
+1️⃣ Activer les flakes (si pas déjà fait)
+
+Dans /etc/nixos/configuration.nix :
 
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 
-Puis reconstruire :
+Puis :
 
 sudo nixos-rebuild switch
 
-2. Installation depuis le dépôt local
+2️⃣ Installer depuis le dépôt local
 
 Cloner le dépôt :
 
@@ -37,49 +47,50 @@ git clone https://github.com/Elie00000/Nix.git
 cd Nix
 
 
-Identifier le nom d’hôte :
-
-hostname
-
-
-Reconstruction :
+Puis reconstruire le système :
 
 sudo nixos-rebuild switch --flake .#nom-de-la-machine
 
-3. Installation directe depuis GitHub
 
-Sans cloner le dépôt :
+👉 Remplace nom-de-la-machine par ton hostname :
+
+hostname
+
+3️⃣ Installer directement depuis GitHub
+
+Sans cloner :
 
 sudo nixos-rebuild switch --flake github:Elie00000/Nix#nom-de-la-machine
 
-Installation sans Flakes (méthode classique)
+🧰 Installation sans Flakes (Méthode classique)
 
-Cette méthode utilise la configuration traditionnelle située dans /etc/nixos.
+Si tu ne veux pas utiliser les flakes.
 
-1. Cloner le dépôt
+1️⃣ Cloner le dépôt
 git clone https://github.com/Elie00000/Nix.git
 cd Nix
 
-2. Copier les fichiers dans /etc/nixos
+2️⃣ Copier les fichiers dans /etc/nixos
 sudo cp configuration.nix /etc/nixos/
 sudo cp hardware-configuration.nix /etc/nixos/
 
-3. Reconstruction
+3️⃣ Rebuild
 sudo nixos-rebuild switch
 
-Réinstallation complète sur une nouvelle machine
+🖥 Réinstallation complète d’un système
 
-Après une installation minimale de NixOS :
+Sur une nouvelle installation NixOS :
 
 nix-shell -p git
 git clone https://github.com/Elie00000/Nix.git
 cd Nix
 sudo nixos-rebuild switch --flake .#nom-de-la-machine
 
+🔒 À propos de hardware-configuration.nix
 
-Si le matériel est différent, il est recommandé de régénérer :
+Ce fichier est spécifique à la machine.
+Il est conservé ici pour rendre le système entièrement reproductible.
+
+Pour une nouvelle machine, il est recommandé de régénérer :
 
 sudo nixos-generate-config
-
-
-et d’adapter hardware-configuration.nix.
