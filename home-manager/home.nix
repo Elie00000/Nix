@@ -289,7 +289,7 @@ in
           notification = false;
         }
         {
-          command = "feh --bg-scale ${./wallpapers/MikuTeto.png}";
+          command = "feh --bg-scale ${~/wallpapers/MikuTeto.png}";
           always = true;
         }
         {
