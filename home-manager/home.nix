@@ -332,7 +332,7 @@ in
   # ============================================================================
   # POLYBAR
   # ============================================================================
-  home.file.".config/polybar/config".source = ./dotfiles/polybar/config.ini;
+  home.file.".config/polybar/config".source = ./dotfiles/polybar/config;
 
   home.activation.polybar-setup = ''
     pkill -x polybar || true
