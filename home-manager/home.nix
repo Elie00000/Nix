@@ -44,7 +44,7 @@ in
     liberation_ttf
     open-sans
     roboto
-    ubuntu-
+    ubuntu-classic
     jetbrains-mono
     monaspace
     anonymousPro
