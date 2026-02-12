@@ -51,17 +51,17 @@ modules-right = xkeyboard cpu memory wlan eth temperature battery powermenu
 [module/xworkspaces]
 type = internal/xworkspaces
 
-label-active = 󰋑
+label-active = ●
 label-active-foreground = ${colors.heart-active}
 label-active-padding = 1
 label-active-font = 1
 
-label-occupied = 󰋑
+label-occupied = ●
 label-occupied-foreground = ${colors.heart-occupied}
 label-occupied-padding = 1
 label-occupied-font = 1
 
-label-empty = 󰋑
+label-empty = ●
 label-empty-foreground = ${colors.heart-empty}
 label-empty-padding = 1
 label-empty-font = 1
