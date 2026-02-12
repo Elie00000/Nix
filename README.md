@@ -25,7 +25,6 @@ Fichiers et dossiers
 | `hardware-configuration.nix`   | Configuration matérielle générée par NixOS       |
 | `flake.nix`                    | Définition flake (si utilisée)                   |
 | `flake.lock`                   | Verrouillage des versions des dépendances         |
-| `modules/`                     | Modules personnalisés (si présents)               |
 | `home/`                        | Configuration Home-Manager (si utilisée)          |
 
 ---
