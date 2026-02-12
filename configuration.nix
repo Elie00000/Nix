@@ -175,7 +175,7 @@
     extraConfig = ''
       user-background = false
     '';
-    background = "~/wallpapers/login.jpg";
+    background = "/home/elie/wallpapers/login.jpg";
   };
 
   # LightDM GTK Greeter
@@ -187,7 +187,7 @@
       [greeter]
       show-indicators=
       position = 50%,center 85%,center
-      # default-user-image = '~/wallpapers/avatar.png'
+      # default-user-image = '/home/elie/wallpapers/avatar.png'
       font-name = Quicksand 12
       text-color = #e0e0e0
       panel-background-color = rgba(0,0,0,0.0)
