@@ -40,7 +40,7 @@ padding-right = 5
 
 modules-left = time date xwindow
 modules-center = xworkspaces
-modules-right = xkeyboard cpu memory wlan eth powermenu
+modules-right = xkeyboard cpu memory wlan eth temperature battery powermenu
 
 ;=================;
 ;                 ;
@@ -161,6 +161,37 @@ format-prefix-font = 3
 format-prefix-foreground = ${colors.primary}
 label = %percentage:2%%
 
+[module/temperature]
+type = internal/temperature
+interval = 2
+thermal-zone = 0
+warn-temperature = 75
+
+format = <label>
+format-foreground = ${colors.foreground}
+
+label =   %temperature-c%
+label-warn =   %temperature-c%
+label-warn-foreground = #bf616a
+
+[module/battery]
+type = internal/battery
+battery = BAT1
+adapter = AC
+
+full-at = 98
+low-at = 20
+
+poll-interval = 5
+
+format-charging =   <label>
+format-discharging =   <label>
+format-full =   <label>
+
+label = %percentage%%
+label-low-foreground = #bf616a
+
+
 [module/alsa]
 type = internal/alsa
 
@@ -172,24 +203,24 @@ master-mixer = Master
 interval = 5
 
 format-volume = <ramp-volume> <label-volume>
-format-volume-background = ${color.shade5}
 format-volume-padding = 1
 
 format-muted = <label-muted>
-format-muted-prefix = 婢
-format-muted-background = ${color.shade5}
+format-muted-prefix =  
 format-muted-padding = 1
 
 label-volume = "%percentage%% "
-
 label-muted = " Muted "
-label-muted-foreground = ${color.foreground}
+label-muted-foreground = ${colors.foreground}
 
-ramp-volume-0 = 奄
-ramp-volume-1 = 奔
-ramp-volume-2 = 墳
+; Icônes volume (Font Awesome sûres)
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
+; Cas casque branché
 ramp-headphones-0 = 
+
 
 [module/powermenu]
 type = custom/text
