@@ -23,7 +23,7 @@
         vscode
         alsa-utils
         shortwave 
-	      nekoray
+	    nekoray
 
         # Fonts
         material-design-icons
