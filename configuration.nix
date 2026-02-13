@@ -79,9 +79,10 @@ in {
     [[ -f $HOME/.p10k.zsh ]] && source $HOME/.p10k.zsh
 
     # Charger instant prompt si disponible (Powerlevel10k)
-    p10k_instant_prompt="$XDG_CACHE_HOME/p10k-instant-prompt-${USER}.zsh"
+    p10k_instant_prompt="${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${username}.zsh"
     [[ -r $p10k_instant_prompt ]] && source $p10k_instant_prompt
   '';
+
 
   # ==============================
   # SERVICES
