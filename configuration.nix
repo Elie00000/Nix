@@ -7,6 +7,10 @@ let
   wallpaperDir = "/home/elie/.config/home-manager/dotfiles/wallpaper";
   username = "elie";
 in {
+  imports =
+  [
+    ./hardware-configuration.nix
+  ];
   # ==============================
   # BOOTLOADER
   # ==============================
