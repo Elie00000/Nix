@@ -71,17 +71,43 @@ in {
   # ==============================
   # SHELL (ZSH)
   # ==============================
-  programs.zsh.promptInit = ''
-    # Powerlevel10k theme
-    source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
 
-    # Charger le fichier p10k.zsh si il existe
-    [[ -f $HOME/.p10k.zsh ]] && source $HOME/.p10k.zsh
+  users.defaultUserShell = pkgs.zsh;
 
-    # Charger instant prompt si disponible (Powerlevel10k)
-    p10k_instant_prompt="${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${username}.zsh"
-    [[ -r $p10k_instant_prompt ]] && source $p10k_instant_prompt
-  '';
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+
+    shellAliases = {
+      ll = "ls -l";
+      la = "ls -a";
+      zap = "./zapret-discord-youtube-linux/main_script.sh";
+      edit = "sudo -e";
+      upd = "sudo nixos-rebuild switch --flake /etc/nixos";
+      cdn = "cd /etc/nixos";
+    };
+
+    ohMyZsh = {
+      enable = true;
+    };
+
+    promptInit = ''
+      # this act as your ~/.zshrc but for all users (/etc/zshrc)
+      source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+      source ~/.p10k.zsh
+      if [[ -r "''${XDG_CACHE_HOME:-''$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
+        source "''${XDG_CACHE_HOME:-''$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
+      fi
+    '';
+
+    histSize = 10000;
+    histFile = "$HOME/.zsh_history";
+    setOptions = [
+      "HIST_IGNORE_ALL_DUPS"
+    ];
+  };
 
 
   # ==============================
