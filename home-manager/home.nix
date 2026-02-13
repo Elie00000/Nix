@@ -73,7 +73,7 @@
     };
     Service = {
       ExecStart =
-        "${pkgs.polybar}/bin/polybar -c ~/.config/home-manager/dotfiles/polybar/config example";
+        "${pkgs.polybar}/bin/polybar -c ~/.config/home-manager/dotfiles/polybar/config";
       Restart = "always";
     };
     Install.WantedBy = [ "graphical-session.target" ];
