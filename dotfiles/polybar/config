@@ -177,7 +177,7 @@ label-warn-foreground = #bf616a
 [module/battery]
 type = internal/battery
 battery = BAT1
-adapter = AC
+adapter = ADP1
 
 full-at = 98
 low-at = 20
