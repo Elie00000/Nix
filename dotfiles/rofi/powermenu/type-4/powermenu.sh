@@ -17,13 +17,13 @@ theme='style-3'
 host=`hostname`
 
 # Options
-shutdown=''
-reboot=''
-lock=''
-suspend=''
-logout=''
-yes=''
-no=''
+shutdown='⏻'   # Power symbol (universel)
+reboot=''     # Font Awesome redo / reboot
+lock=''       # Font Awesome lock
+suspend='⏾'    # Power sleep symbol
+logout=''     # Font Awesome sign-out
+yes='✔'        # Check
+no='✖'         # Cross
 
 # Rofi CMD
 rofi_cmd() {
