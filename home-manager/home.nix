@@ -75,7 +75,7 @@
   };
 
   # === i3 ===
-  services.xserver.windowManager.i3 = {
+  programs.i3 = {
     enable = true;
     package = pkgs.i3;
     extraConfig = builtins.readFile ./dotfiles/i3/config;
