@@ -154,9 +154,8 @@ in {
         '';
       };
     };
-    defaultSession = "none+i3";
   };
-
+  services.displayManager.defaultSession = "none+i3";
   # ==============================
   # XSERVER & WINDOW MANAGER
   # ==============================
@@ -164,7 +163,7 @@ in {
     enable = true;
     windowManager.openbox.enable = true;
     windowManager.i3.enable = true;
-    layout = "fr";
+    xkb.layout = "fr";
     displayManager.sessionCommands = ''
       ${pkgs.xorg.xrdb}/bin/xrdb -merge <${pkgs.writeText "Xresources" ''
         Xft.dpi: 120
