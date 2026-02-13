@@ -9,7 +9,7 @@ dim_level=20
 blur_level=0
 pixel_scale=10,1000
 solid_color=333333
-wallpaper_cmd="feh --bg-fill '~/wallpapers/lockscreen.png'"
+wallpaper_cmd="feh --bg-fill './wallpapers/lockscreen.png'"
 quiet=false
 
 # === Angel Pastel Theme === #
