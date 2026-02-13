@@ -1,7 +1,3 @@
-Voici une version mise en forme avec du Markdown, plus lisible et esthétique :
-
----
-
 # 🧊 Configuration NixOS – Elie
 
 Ce dépôt contient ma configuration personnelle **NixOS**, versionnée avec **Git** afin d’avoir un système :
@@ -82,7 +78,9 @@ cd Nix
 ### 2️⃣ Copier les fichiers dans `/etc/nixos`
 ```bash
 sudo cp configuration.nix /etc/nixos/
-sudo cp hardware-configuration.nix /etc/nixos/
+sudo cp -r home-manager ~/.config/
+sudo cp -r dotfiles ~/.config/home-manager/
+sudo cp -r wallpapers ~/.config/home-manager/dotfiles/
 ```
 
 ### 3️⃣ Rebuild
