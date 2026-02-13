@@ -14,7 +14,7 @@
   home.packages = with pkgs; [
     lshw picom neofetch feh pywal polybar betterlockscreen
     i3lock-color mpv xwinwrap arandr udiskie
-    vscode alsa-utils shortwave nekoray
+    alsa-utils shortwave nekoray
     alacritty rofi
 
     # Fonts
