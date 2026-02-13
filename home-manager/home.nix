@@ -28,13 +28,13 @@
         # Fonts
         material-design-icons
         noto-fonts
-        noto-fonts-emoji
+        noto-fonts-color-emoji
         font-awesome
         lato
         liberation_ttf
         open-sans
         roboto
-        ubuntu_font_family
+        ubuntu-classic
         jetbrains-mono
         monaspace
         anonymousPro
