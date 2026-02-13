@@ -16,61 +16,45 @@
 background = #ebebeb
 foreground = #556070
 foreground-alt = #99A5B0
+primary = #556070
+secondary = #C8C8C8
 heart-empty = #C8C8C8
 heart-occupied = #C8C8C8
 heart-active = #556070
+shade5 = #313244
 
 [bar/main]
 height = 30pt
 radius = 15
 cursor-click = pointer
-
 background = ${colors.background}
 foreground = ${colors.foreground}
-
 font-0 = "Quicksand:weight=bold;size=12"
 font-1 = "SpaceMono Nerd Font:weight=bold:size=12"
 font-2 = "Font Awesome 7 Free Solid:size=12;2"
-
 module-margin = 2
 separator = " | "
 border-size = 10
 padding-left = 5
 padding-right = 5
-
 modules-left = time date xwindow
 modules-center = xworkspaces
-modules-right = xkeyboard cpu memory wlan eth temperature battery powermenu
-
-;=================;
-;                 ;
-; center modules  ;
-;                 ;
-;=================;
+modules-right = temperature alsa battery cpu memory wlan eth powermenu
 
 [module/xworkspaces]
 type = internal/xworkspaces
-
 label-active = ●
 label-active-foreground = ${colors.heart-active}
 label-active-padding = 1
 label-active-font = 1
-
 label-occupied = ●
 label-occupied-foreground = ${colors.heart-occupied}
 label-occupied-padding = 1
 label-occupied-font = 1
-
 label-empty = ●
 label-empty-foreground = ${colors.heart-empty}
 label-empty-padding = 1
 label-empty-font = 1
-
-;=================;
-;                 ;
-;  left modules   ;
-;                 ;
-;=================;
 
 [module/time]
 type = internal/date
@@ -79,7 +63,6 @@ date =   %H:%M
 label = %date%
 label-foreground = ${colors.foreground}
 
-
 [module/date]
 type = internal/date
 interval = 1
@@ -87,30 +70,16 @@ date =   %y-%m-%d
 label = %date%
 label-foreground = ${colors.foreground}
 
-
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:60:...%
-
-;=================;
-;                 ;
-;  right modules  ;
-;                 ;
-;=================;
-
-[network-base]
-type = internal/network
-interval = 5
-format-connected = <laprimarybel-connected>
-format-disconnected = <label-disconnected>
-label-disconnected = %{F#F0C674}%ifname%%{F#707880} disconnected
 
 [module/xkeyboard]
 type = internal/xkeyboard
 format = <label-layout> <label-indicator>
 format-spacing = 2pt
 label-layout = %layout%
-label-indicator = %name%
+label-indicator-on = %name%
 label-layout-foreground = ${colors.primary}
 label-indicator-on-numlock = NUMLK
 label-indicator-on-capslock = CAPS
@@ -123,11 +92,9 @@ label-indicator-background = ${colors.secondary}
 type = internal/network
 interface-type = wired
 interval = 3
-
 label-connected = 󰌗   %{F#88c0d0}%ifname%%{F-}
 label-connected-foreground = ${colors.foreground}
 format-connected = <label-connected>
-
 label-disconnected = 󰌙   %{F#bf616a}%ifname%%{F-}
 label-disconnected-foreground = ${colors.foreground}
 format-disconnected = <label-disconnected>
@@ -136,15 +103,12 @@ format-disconnected = <label-disconnected>
 type = internal/network
 interface-type = wireless
 interval = 3
-
 label-connected =     %{F#88c0d0}%ifname%%{F-}
 label-connected-foreground = ${colors.foreground}
 format-connected = <label-connected>
-
 label-disconnected =     %{F#bf616a}%ifname%%{F-}
 label-disconnected-foreground = ${colors.foreground}
 format-disconnected = <label-disconnected>
-
 
 [module/memory]
 type = internal/memory
@@ -161,36 +125,15 @@ format-prefix-font = 3
 format-prefix-foreground = ${colors.primary}
 label = %percentage:2%%
 
-[module/temperature]
-type = internal/temperature
-interval = 2
-thermal-zone = 0
-warn-temperature = 75
-
-format = <label>
-format-foreground = ${colors.foreground}
-
-label =   %temperature-c%
-label-warn =   %temperature-c%
-label-warn-foreground = #bf616a
-
 [module/battery]
 type = internal/battery
 battery = BAT1
-adapter = ADP1
-
-full-at = 98
-low-at = 20
-
-poll-interval = 5
-
-format-charging =   <label>
-format-discharging =   <label>
-format-full =   <label>
-
-label = %percentage%%
-label-low-foreground = #bf616a
-
+adapter = AC
+format-charging = <label-charging>
+format-discharging = <label-discharging>
+label-charging = 󰂄 %percentage%%
+label-discharging = 󰁹 %percentage%%
+label-full = 󰁹 100%
 
 [module/alsa]
 type = internal/alsa
@@ -203,42 +146,50 @@ master-mixer = Master
 interval = 5
 
 format-volume = <ramp-volume> <label-volume>
+format-volume-background = ${color.shade5}
 format-volume-padding = 1
 
 format-muted = <label-muted>
-format-muted-prefix =  
+format-muted-prefix = 
+format-muted-background = ${color.shade5}
 format-muted-padding = 1
 
 label-volume = "%percentage%% "
 label-muted = " Muted "
-label-muted-foreground = ${colors.foreground}
+label-muted-foreground = ${color.foreground}
 
-; Icônes volume (Font Awesome sûres)
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 
-; Cas casque branché
 ramp-headphones-0 = 
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 3
+warn-temperature = 75
+
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+
+label = %temperature-c%
+label-warn = %temperature-c%
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+
+ramp-foreground = ${colors.foreground}
 
 
 [module/powermenu]
 type = custom/text
-
-content = 󰤁
-content-background = black
-content-foreground = red
-
+format = 
 click-left = ~/.config/rofi/powermenu/type-4/powermenu.sh
 click-right = powermenu_t4
-
 margin-bottom = 0
-
-;=================;
-;                 ;
-;     Other       ;
-;                 ;
-;=================;
 
 [settings]
 screenchange-reload = true
@@ -248,6 +199,3 @@ compositing-underline = over
 compositing-foreground = over
 compositing-border = over
 pseudo-transparency = true
-
-; alsa and other applets wip ;_;
-; based on https://github.com/iluvgirlswithglasses/dotfiles/blob/cute-light/.config/polybar/config.ini 
