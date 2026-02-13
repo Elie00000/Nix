@@ -209,7 +209,7 @@ exec --no-startup-id skippy-xd --start-daemon
 bindsym $mod+shift+d exec --no-startup-id skippy-xd
 
 #autostart
-exec_always --no-startup-id feh --bg-scale ./wallpapers/MikuTeto.png
+exec_always --no-startup-id feh --bg-scale ~/.config/home-manager/dotfiles/wallpapers/MikuTeto.png
 exec_always --no-startup-id "picom --config ./dotfiles/picom/picom.conf -b && polybar --config=./dotfiles/polybar/config"
 
 #other
