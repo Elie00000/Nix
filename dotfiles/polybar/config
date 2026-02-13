@@ -187,7 +187,7 @@ ramp-foreground = ${colors.foreground}
 [module/powermenu]
 type = custom/text
 format = 
-click-left = ~/.config/rofi/powermenu/type-4/powermenu.sh
+click-left = ~/.config/home-manager/dotfiles/rofi/powermenu/type-4/powermenu.sh
 click-right = powermenu_t4
 margin-bottom = 0
 
