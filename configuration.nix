@@ -122,7 +122,6 @@ in {
       jack.enable = true;
     };
     printing.enable = true;
-    rtkit.enable = true;
     gvfs.enable = true;
     autorandr.enable = true;
     steam.enable = true;
