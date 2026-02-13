@@ -57,7 +57,7 @@
   home = {
     username = "elie";
     homeDirectory = "/home/elie";
-    stateVersion = "25.11";
+    stateVersion = "26.05";
   };
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
     Unit = {
